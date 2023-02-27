@@ -852,6 +852,9 @@ hr {
 .spin {
     display: none;
 }
+.spin2 {
+    display: none;
+}
 
 .pagemodal {
     display: none;
@@ -897,3 +900,39 @@ hr {
 .logo-img{
     width: 60px;
 }
+
+.student-card {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+.swichItem {
+    float: right;
+}
+
+.crd-txt {
+    text-align: center;
+  }
+  .cat-crd {
+    width: 330px;
+  }
+  .cat-crd button {
+    margin-top: 15px;
+  }
+  #avail-cat {
+    width: 400px;
+    height: 400px;
+    border-radius: 15px;
+    box-shadow:  rgb(17 17 26 / 10%) 0px 8px 24px, rgb(17 17 26 / 10%) 0px 16px 56px, rgb(17 17 26 / 10%) 0px 24px 80px;
+    justify-items: center;
+  }
+  .cat-disp {
+    margin-left: 150px;
+    margin-top: 50px;
+    
+  }
