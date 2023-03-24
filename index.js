@@ -140,7 +140,7 @@ function dashboardApi() {
         method: 'GET',
         headers: dashHeader
     }
-    const url = "http://pluralcodesandbox.com/yorubalearning/api/admin/admin_dashboardapi";
+    const url = "https://pluralcodesandbox.com/yorubalearning/api/admin/admin_dashboardapi";
     fetch(url, dashReq)
     .then(response => response.json())
     .then(result => {
