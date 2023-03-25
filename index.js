@@ -808,6 +808,66 @@ function upDatePassword(event) {
 
 
 
+
+
+function updateSubCategory(event) {
+    event.preventDefault();
+    const getSpin = document.querySelector(".spin2");
+    getSpin.style.display = "inline-block";
+    const getUpdateName = document.getElementById("updateSubName").value;
+    const getUpdateImage1 = document.getElementById("updateSubImage").files[0];
+    const subId = localStorage.getItem("un");
+    console.log(subId);
+    if ( getUpdateName === "") {
+        Swal.fire({
+            icon: 'info',
+            text: `The Name field is Required`,
+            confirmButtonColor: "#2D85DE"
+        })
+    getSpin.style.display = "none";
+    }
+    else {
+    const top1 = localStorage.getItem("admin");
+    const top2 = JSON.parse(top1);
+    const top3 = top2.token;
+    const updateHeaders = new Headers();
+    updateHeaders.append("Authorization", `Bearer ${top3}`);
+        const upFormData = new FormData();
+        upFormData.append("name", getUpdateName);
+        upFormData.append("image", getUpdateImage1);
+        upFormData.append("subcategory_id", subId);
+                const upReq = {
+                    method: 'POST',
+                    headers: updateHeaders,
+                    body: upFormData
+                };
+                const url = "https://pluralcodesandbox.com/yorubalearning/api/admin/update_subcategory";
+                fetch(url, upReq)
+                .then(response => response.json())
+                .then(result => {
+                    console.log(result);
+                    if (result.status === "success") {
+                        Swal.fire({
+                            icon: 'success',
+                            text: `${result.message}`,
+                            confirmButtonColor: '#2D85DE'
+                        })
+                        setTimeout(() => {
+                            location.reload();
+                        }, 3000)
+                    }
+                    else{
+                        Swal.fire({
+                            icon: 'info',
+                            text: 'Unsuccessful!',
+                            confirmButtonColor: '#2D85DE'
+                        })
+                        getSpin.style.display = "none";
+                    }
+                })
+                .catch(error => console.log('error', error));
+            }
+        }
  
 
 
