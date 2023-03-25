@@ -936,3 +936,24 @@ hr {
     margin-top: 50px;
     
   }
+  @media (max-width: 650px) {
+    .cat-disp{
+        /* box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px; */
+        /* width: 90vw; */
+        /* padding: 25px 18px; */
+        margin-left: 0rem;
+        border-radius: 15px;
+        overflow: hidden scroll;
+        
+    }
+    .cat-crd {
+        width: auto;
+      };
+    }
+    @media screen and (min-width: 760px) and (max-width: 1300px) {
+        .cat-disp {
+            margin-left: auto;
+            
+        }
+    
+    }

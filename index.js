@@ -719,6 +719,14 @@ function getSubList() {
         .catch(error => console.log('error', error));
     }}
 
+    function chooseImg(event) {
+        event.preventDefault();
+        const div1 = document.querySelector(".getWrapp");
+        const div2 = document.querySelector(".wrapper");
+        div1.style.display = "none";
+        div2.style.display = "block";
+       }
+
 // function for update password
 
 function upDatePassword(event) {
