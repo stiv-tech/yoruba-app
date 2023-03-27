@@ -660,7 +660,7 @@ function getSubList() {
     const getUpdateName = document.getElementById("updateName").value;
     const getUpdateEmaill = document.getElementById("updateEmail").value;
 
-    if ( getUpdateName === "" || getUpdateEmail === "") {
+    if ( getUpdateName === "" || getUpdateEmaill === "") {
         Swal.fire({
             icon: 'info',
             text: 'Email incoorrect',
